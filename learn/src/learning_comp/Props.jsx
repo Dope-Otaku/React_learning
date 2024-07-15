@@ -4,7 +4,7 @@
 //this funcion is created using props validation
 function UsingProps(props) {
   return (
-    <h1>
+    <h1 style={{ backgroundColor: "yellow" }}>
       hello {props.name} your food amount is: ${props.amount}{" "}
     </h1>
   );
