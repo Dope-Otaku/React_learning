@@ -25,6 +25,11 @@ function TodoL() {
   const [desc, setDesc] = useState("");
   // console.log(title, desc);
 
+  const deletetask = (index) => {
+    setTask((prevTasks) => prevTasks.filter((_, i) => i !== index)); //if we never want creata new param but nee d it then you should use _
+    //prevTasks is imp in usestate modules
+  };
+
   const submithandler = (e) => {
     e.preventDefault();
 
@@ -73,16 +78,22 @@ function TodoL() {
           <button
             style={innerBox}
             type="submit"
-            onClick={submithandler}
+            // onClick={submithandler}
             disabled={title.trim() == "" || desc.trim() == ""} //it's anew trickj
           >
             Commit
           </button>
         </form>
+        {task.map((item, index) => (
+          <Task
+            key={index}
+            title={item.title}
+            description={item.description}
+            deletetask={deletetask}
+            index={index}
+          /> //gotta learn this trick
+        ))}
       </div>
-      {task.map((item, index) => (
-        <Task key={index} title={item.title} description={item.description} /> //gotta learn this trick
-      ))}
     </>
   );
 }
