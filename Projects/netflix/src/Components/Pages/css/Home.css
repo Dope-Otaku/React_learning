@@ -1,0 +1,25 @@
+.row{
+    
+    margin-top: 3px;
+}
+.card{
+    width: 200px;
+    margin: 1 rem;
+    cursor:pointer;
+    transition: transform 0.5s;
+}
+
+.card:hover{
+
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.innerWal{
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: auto;
+    padding: 1rem;
+
+    /* overflow-y: hidden; */
+}
