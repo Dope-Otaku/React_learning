@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import logo from "/prof.png";
+import Netflixlogo from "/n-sma.webp";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -12,12 +13,22 @@ const Navbar = () => {
           </div>
         </div>
         <div className="midBox">
-          <Link to="/">Home</Link>
-          <Link to="/Shows">Shows</Link>
-          <Link to="/Movies">Movies</Link>
-          <Link to="/MyNetflix">My Netflix</Link>
+          <Link className="navLink" to="/">
+            Home
+          </Link>
+          <Link className="navLink" to="/Shows">
+            Shows
+          </Link>
+          <Link className="navLink" to="/Movies">
+            Movies
+          </Link>
+          <Link className="navLink" to="/MyNetflix">
+            My Netflix
+          </Link>
         </div>
-        <div className="rightBox">Right box</div>
+        <div className="rightBox">
+          <img className="ImgLo" src={Netflixlogo} />
+        </div>
       </nav>
     </>
   );

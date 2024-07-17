@@ -1,5 +1,6 @@
 *{
-    border: 1px solid red
+    /* border: 1px solid red; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 nav{
@@ -11,7 +12,7 @@ nav{
 }
 
 .leftBox{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     align-items: center;
 }
@@ -24,14 +25,33 @@ nav{
 }
 
 .midBox{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     align-items: center;
+    margin: 0px 5px 0px 5px;
+    padding: 20px;
+    
+}
+
+.navLink{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    color: black
+}
+
+.navLink:hover{
+    background-color: yellow;
+    border-radius: 30px;
+    color: black
 }
 
 
-
-.rightBox{
-    border: 1px solid black;
+.ImgLo{
+    border: 1px solid red;
+    margin: 0;
+    height: 10vh;
 
 }
