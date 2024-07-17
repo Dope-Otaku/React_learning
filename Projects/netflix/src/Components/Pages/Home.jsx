@@ -9,14 +9,7 @@ const imgUrl = "https://image.tmdb.org/t/p/original/";
 
 const Card = ({ img }) => <img className="card" src={img} alt="cover" />;
 
-const Row = ({
-  title,
-  arr = [
-    {
-      img: "http://media.comicbook.com/201/03/avengers-infinity-war-poster-1093756.jpeg",
-    },
-  ],
-}) => (
+const Row = ({ title, arr = [] }) => (
   <div className="row">
     <h2>{title}</h2>
     <div className="innerWal">
@@ -29,16 +22,26 @@ const Row = ({
 
 const Home = () => {
   const [upcomingMovies, setUpcomingMovies] = useState([]);
+  const [recentMo, setRecentMo] = useState([]);
 
   useEffect(() => {
     const upcomingData = async () => {
       const {
         data: { results },
       } = await axios.get(`${url}/movie/upcoming?api_key=${apiKey}`);
-      // console.log(results);
+      console.log(results);
       setUpcomingMovies(results);
     };
+
+    const recentlyWatched = async () => {
+      const {
+        data: { results },
+      } = await axios.get(`${url}/movie/now_playing?api_key=${apiKey}`);
+      console.log(results);
+      setRecentMo(results);
+    };
     upcomingData();
+    recentlyWatched();
   }, []);
 
   return (
@@ -47,7 +50,7 @@ const Home = () => {
       {/* <h1>Popular on Net</h1> */}
 
       <Row title={"Upcoming Movies"} arr={upcomingMovies} />
-      <Row title={"Recently Watched"} />
+      <Row title={"Recently Watched"} arr={recentMo} />
       <Row title={"New List"} />
     </section>
   );
