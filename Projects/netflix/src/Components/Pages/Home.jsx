@@ -23,13 +23,14 @@ const Row = ({ title, arr = [] }) => (
 const Home = () => {
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [recentMo, setRecentMo] = useState([]);
+  const [trendMovies, setTrendMovies] = useState([]);
 
   useEffect(() => {
     const upcomingData = async () => {
       const {
         data: { results },
       } = await axios.get(`${url}/movie/upcoming?api_key=${apiKey}`);
-      console.log(results);
+      // console.log(results);
       setUpcomingMovies(results);
     };
 
@@ -37,11 +38,21 @@ const Home = () => {
       const {
         data: { results },
       } = await axios.get(`${url}/movie/now_playing?api_key=${apiKey}`);
-      console.log(results);
+      // console.log(results);
       setRecentMo(results);
     };
+
+    const trendingMovies = async () => {
+      const {
+        data: { results },
+      } = await axios.get(`${url}/movie/popular?api_key=${apiKey}`);
+      // console.log(results);
+      setTrendMovies(results);
+    };
+
     upcomingData();
     recentlyWatched();
+    trendingMovies();
   }, []);
 
   return (
@@ -51,7 +62,7 @@ const Home = () => {
 
       <Row title={"Upcoming Movies"} arr={upcomingMovies} />
       <Row title={"Recently Watched"} arr={recentMo} />
-      <Row title={"New List"} />
+      <Row title={"Trending"} arr={trendMovies} />
     </section>
   );
 };
