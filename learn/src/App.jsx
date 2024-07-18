@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // for xample {Browser Router as Souvik}
 import Footer from "./learning_comp/Footer";
 import Playarea from "./learning_comp/Playarea";
+import Hooks from "./learning_comp/Hooks/Hooks";
 // import Props from "./learning_comp/Props";
 // import Home from "./learning_comp/Home";
 // import TodoL from "./learning_comp/Todo/TodoL";
@@ -19,6 +20,7 @@ function App() {
       {/* <TodoL /> */}
       {/* <Home /> */}
       {/* <Props /> */}
+      <Hooks />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/contact" element={<Contact />} />
