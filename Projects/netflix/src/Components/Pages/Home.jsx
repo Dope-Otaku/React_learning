@@ -2,8 +2,9 @@ import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./css/Home.css";
 import axios from "axios";
+import { apiKey } from "./key.js";
 
-const apiKey = "7e5122f42b3d47b2f9c1deaf4e1d2214";
+// const apiKey = process.env.REACT_APP_NETFLIX_API;
 const url = "https://api.themoviedb.org/3";
 const imgUrl = "https://image.tmdb.org/t/p/original/";
 // const upcoming = upcoming;
