@@ -1,4 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
+import { contex } from "../../App";
+
+const Cunning = () => {
+  const data = useContext(contex);
+  const NewElement = useRef(null);
+
+  useEffect(() => {
+    console.log(NewElement);
+  }, []);
+
+  return <div ref={NewElement}>{data}</div>;
+};
 
 // useState
 const Hooks = () => {
@@ -11,6 +23,7 @@ const Hooks = () => {
 
   return (
     <>
+      {Cunning()}
       {/* we need to  create a counter using useState  */}
       <div className="Counter">
         <button

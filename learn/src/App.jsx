@@ -9,13 +9,21 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./learning_comp/Footer";
 import Playarea from "./learning_comp/Playarea";
 import Hooks from "./learning_comp/Hooks/Hooks";
+import { createContext } from "react";
 // import Props from "./learning_comp/Props";
 // import Home from "./learning_comp/Home";
 // import TodoL from "./learning_comp/Todo/TodoL";
+const contex = createContext();
 
 function App() {
   return (
     <BrowserRouter>
+      <contex.Provider value={"souvik"}>
+        <div>
+          <Hooks />
+        </div>
+      </contex.Provider>
+
       <Navbar />
       {/* <TodoL /> */}
       {/* <Home /> */}
@@ -35,3 +43,4 @@ function App() {
 }
 
 export default App;
+export { contex };
