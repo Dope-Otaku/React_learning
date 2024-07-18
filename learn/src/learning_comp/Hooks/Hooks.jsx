@@ -1,26 +1,40 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
+// useState
 const Hooks = () => {
+  //   let a = value;
   const [value, setValue] = useState(0);
 
-  let a = value;
-  const increment = () => {
-    setValue(a + 1);
-  };
-  const decrement = () => {
-    setValue(a - 1);
-  };
+  useEffect(() => {
+    console.log("hello world");
+  }, [value]);
 
   return (
     <>
       {/* we need to  create a counter using useState  */}
       <div className="Counter">
-        <button onClick={increment}>Add</button>
+        <button
+          onClick={() => {
+            setValue(value + 1);
+          }}
+        >
+          Add
+        </button>
         <p>{value}</p>
-        <button onClick={decrement}>Subtract</button>
+        <button
+          onClick={() => {
+            setValue(value - 1);
+          }}
+        >
+          Subtract
+        </button>
       </div>
     </>
   );
 };
+
+// const Hooks = () => {
+//   return <>hello</>;
+// };
 
 export default Hooks;
