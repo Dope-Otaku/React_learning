@@ -20,21 +20,22 @@ class ReactLifeCycle extends React.Component {
     this.increment = this.increment.bind(this);
   }
 
-  increment() {
-    this.setState((prev) => {
-      return {
-        count: prev.count + 1,
-      };
-    });
-  }
-
-  //   increment() {   this will not work as we have no prev state to remove it with
-  //     this.setState(() => {
+  //   there are two methods o call a new function like these
+  //   increment() {
+  //     this.setState((prev) => {
   //       return {
-  //         count: this.count + 1,
+  //         count: prev.count + 1,
   //       };
   //     });
   //   }
+
+  increment() {
+    this.setState(() => {
+      return {
+        count: this.state.count + 1,
+      };
+    });
+  }
 
   componentDidMount() {
     setTimeout(() => {
