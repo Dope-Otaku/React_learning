@@ -42,6 +42,11 @@ class ReactLifeCycle extends React.Component {
       console.log("componentDidMount timer");
     }, 3000);
   }
+
+  shouldComponentUpdate() {
+    return true; //by default it is set to true so that ui changes can be seen although using this lalso the logic is still working but not getting updated in ui
+  }
+
   componentDidUpdate() {
     setTimeout(() => {
       console.log("componentDidUpdate timer");
