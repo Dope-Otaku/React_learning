@@ -1,6 +1,6 @@
 import React from "react";
 
-//componentDidMount
+//componentDidMount === useeffect properties in functional based components
 //shouldComponentUpdate
 //componentDidUpdate
 //componentWillUnmount
