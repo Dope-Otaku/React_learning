@@ -3,7 +3,7 @@ import React from "react";
 //componentDidMount === useeffect properties in functional based components
 //shouldComponentUpdate
 //componentDidUpdate
-//componentWillUnmount
+//componentWillUnmount  === return statement in fn components
 
 setTimeout(() => {
   console.log("called timer outside");
@@ -52,6 +52,13 @@ class ReactLifeCycle extends React.Component {
       console.log("componentDidUpdate timer");
     }, 3000);
   }
+
+  componentWillUnmount() {
+    setTimeout(() => {
+      console.log("componentWillUnmount timer");
+    }, 3000);
+  }
+
   render() {
     return (
       <div>
