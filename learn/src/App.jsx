@@ -11,6 +11,7 @@ import Playarea from "./learning_comp/Playarea";
 import Hooks from "./learning_comp/Hooks/Hooks";
 import { createContext } from "react";
 import Learn from "./learning_comp/classVSFunc/Learn";
+import ReactLifeCycle from "./learning_comp/classVSFunc/ReactLifeCycle";
 // import Props from "./learning_comp/Props";
 // import Home from "./learning_comp/Home";
 // import TodoL from "./learning_comp/Todo/TodoL";
@@ -39,6 +40,7 @@ function App() {
         <Route path="/play/:id" element={<Playarea />} />
       </Routes>
       <Learn />
+      <ReactLifeCycle />
 
       <Footer />
     </BrowserRouter>
