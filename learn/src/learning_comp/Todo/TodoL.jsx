@@ -34,7 +34,7 @@ function TodoL() {
     e.preventDefault();
 
     if (title.trim() !== "" && desc.trim() !== "") {
-      setTask([...task, { title: title, description: desc }]); //new thing to learn concept
+      setTask([...task, { title: title, description: desc }]); //new thing to learn concep
       setTitle("");
       setDesc("");
     }
