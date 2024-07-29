@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 const Optimi = () => {
   const [show, setShow] = useState(true);
-  const [key, setKey] = useState("");
+  //   const [id, setId] = useState("");
+
+  //   useEffect(() => {
+  //     setId(Math.random() * 12);
+  //   }, []);
+
+  //   const id = Math.random() * 12;
+  const id = useMemo(() => Math.random() * 12, []);
+
   return (
     <>
-      <div>Secret Key</div>
+      <div>Secret Key: {id}</div>
       <button onClick={() => setShow((prev) => !prev)}>
         {show ? "reveal" : "hide"}
       </button>
