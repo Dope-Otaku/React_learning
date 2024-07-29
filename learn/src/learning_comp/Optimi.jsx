@@ -9,7 +9,7 @@ const Optimi = () => {
   //   }, []);
 
   //   const id = Math.random() * 12;
-  const id = useMemo(() => Math.random() * 12, []);
+  const id = useMemo(() => Math.random() * 12, []); // useMemo is same as useEffect but
 
   return (
     <>
@@ -17,7 +17,7 @@ const Optimi = () => {
       <button onClick={() => setShow((prev) => !prev)}>
         {show ? "reveal" : "hide"}
       </button>
-      <h1>{show ? "**********" : "secret key"}</h1>
+      <h1>{show ? "**********" : id}</h1>
     </>
   );
 };
