@@ -12,6 +12,7 @@ import Hooks from "./learning_comp/Hooks/Hooks";
 import { createContext } from "react";
 import Learn from "./learning_comp/classVSFunc/Learn";
 import ReactLifeCycle from "./learning_comp/classVSFunc/ReactLifeCycle";
+import Optimi from "./learning_comp/Optimi";
 // import Props from "./learning_comp/Props";
 // import Home from "./learning_comp/Home";
 // import TodoL from "./learning_comp/Todo/TodoL";
@@ -27,20 +28,21 @@ function App() {
       </contex.Provider> */}
 
       <Navbar />
+      <Optimi />
 
       {/* <TodoL /> */}
       {/* <Home /> */}
       {/* <Props /> */}
       {/* <Hooks /> */}
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/play" element={<Playarea />} />
         <Route path="/play/:id" element={<Playarea />} />
-      </Routes>
-      <Learn />
-      <ReactLifeCycle />
+      </Routes> */}
+      {/* <Learn /> */}
+      {/* <ReactLifeCycle /> */}
 
       <Footer />
     </BrowserRouter>
