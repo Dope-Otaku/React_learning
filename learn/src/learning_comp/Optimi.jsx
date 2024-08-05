@@ -9,7 +9,7 @@ const Optimi = () => {
   //   }, []);
 
   //   const id = Math.random() * 12;
-  const id = useMemo(() => Math.random() * 12, []); // useMemo is same as useEffect but
+  const id = useMemo(() => Math.random() * 12, []); // useMemo is same as useEffect but onlt calls when the the function is triggered and after that it is shut down!
 
   return (
     <>
